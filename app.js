@@ -63,7 +63,9 @@ function flipCard(card, index) {
      }
 }
 
-
+function checkMatch(){
+     const [card1, card2] = flippedCards;
+}
 let  box = document.querySelector(".box")
      box.style.backgroundImage = "url('./pink.jpeg')"
      box.style.backgroundColor = "green"
