@@ -38,7 +38,11 @@ function createBoard() {
      const gameBoard = document.getElementById('game-board');
      gameBoard.innerHTML = '';
 
-     for ()
+     for (let i = 0; i < cards.length; i++) {
+          const card = createCardElement(i);
+          gameBoard.appendChilda(card);
+     }
+     
 }
 
 let  box = document.querySelector(".box")
