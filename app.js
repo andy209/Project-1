@@ -2,9 +2,41 @@ let cards = [];
 let flippedCards = [];
 let lockBoard = false;
 
-document.getElementById('Btn').addEventListener('click', initializeGame);
+document.getElementById('startBtn').addEventListener('click', initializeGame);
 
+function initializeGame() {
+     hideElements();
+     resetGame();
+     cards = createCardsPairs();
+     cards = shuffleArray(cards);
+     createBoard();
+}
+function hideElements() {
+     const h1 = document.querySelector('.h1');
+     const h2 = document.querySelector('.h2');
+     const startBtn = document.getElementById('startBtn');
 
+     h1.style.display = 'none';
+     h2.style.display = 'none';
+     startBtn.style.display = 'none';
+}
+
+function createCardPairs() {
+     const pairs = [];
+
+     pairs.push(1, 1);
+     pairs.push(2, 2);
+     pairs.push(3, 3);
+     pairs.push(4, 4);
+     pairs.push(5, 5);
+     pairs.push(6, 6);
+     pairs.push(7, 7);
+     pairs.push(8, 8);
+     return pairs;
+}
+function createBoard() {
+     const gameBoard = document
+}
 
 let  box = document.querySelector(".box")
      box.style.backgroundImage = "url('./pink.jpeg')"
