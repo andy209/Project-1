@@ -42,6 +42,11 @@ function createBoard() {
           const card = createCardElement(i);
           gameBoard.appendChilda(card);
      }
+     setTimeout(() => revealNumbers(), 1000);
+}
+
+function revealNumbers() {
+     const cardsElements = document.querySelectorAll('.box');
      
 }
 
