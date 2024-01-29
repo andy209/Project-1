@@ -65,6 +65,31 @@ function flipCard(card, index) {
 
 function checkMatch(){
      const [card1, card2] = flippedCards;
+     if (cards[card1.index] === cards[card2.index]) {
+          card1.card.classList.remove('matched');
+          card2.card.classList.remove('matched');
+     } else {
+          setTimeout(() => {
+            card1.card.classList.remove('flipped');
+            card2.card.classList.remove('flipped');
+          }, 500);
+     }
+     flippedCards = [];
+     lockBoard = false;
+
+     if (document.querySelectorAll('.matched').lenght === cards.length) {
+          announceWin();
+     }
+}
+function announceWin(){
+     alert('Congradulation! You matched all the cards!');
+}
+function shuffleArray(array) {
+     function shuffleArray(array) {
+          for (let i = array.length - 1; i > 0; i--) {
+               const j =
+          }
+     }
 }
 let  box = document.querySelector(".box")
      box.style.backgroundImage = "url('./pink.jpeg')"
