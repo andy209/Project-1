@@ -35,7 +35,10 @@ function createCardPairs() {
      return pairs;
 }
 function createBoard() {
-     const gameBoard = document
+     const gameBoard = document.getElementById('game-board');
+     gameBoard.innerHTML = '';
+
+     for ()
 }
 
 let  box = document.querySelector(".box")
