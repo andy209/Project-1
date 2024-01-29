@@ -2,6 +2,8 @@ let cards = [];
 let flippedCards = [];
 let lockBoard = false;
 
+document.getElementById('Btn').addEventListener('click', initializeGame);
+
 
 
 let  box = document.querySelector(".box")
