@@ -48,7 +48,21 @@ function createBoard() {
 function revealNumbers() {
      const cardsElements = document.querySelectorAll('.box');
      
+     cardsElements.forEach((card, index) => {
+          card.textContent = cards[index];
+     });
 }
+
+function flipCard(card, index) {
+     card.classList.add('flipped');
+     flippedCards.push({card, index});
+
+     if(flippedCards.length === 2) {
+          lockBoard = true;
+          setTimeout(checkMatch, 500);
+     }
+}
+
 
 let  box = document.querySelector(".box")
      box.style.backgroundImage = "url('./pink.jpeg')"
